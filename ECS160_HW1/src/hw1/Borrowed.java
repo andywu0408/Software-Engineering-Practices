@@ -36,6 +36,7 @@ public class Borrowed implements LBState {
 	public void returnIt(LibraryBook book) throws  IOException {
 		book.setState(GotBack.getInst());
 		FileOutputter.write("Leaving State Borrowed for State GotBack\n");
+		book.Notify(this.toString(), "GotBack");  
 	}
 	@Override
 	public String toString() {

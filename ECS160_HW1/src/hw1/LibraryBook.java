@@ -30,9 +30,13 @@ public class LibraryBook implements Subject {
 	}
 	@Override
 	public void detach(Observer observer) {
+		if(!observers.contains(observer)) {
+			return;
+		}
 		this.observers.remove(observer);
 		try {
 			FileOutputter.write(observer.getName() + " is no longer watching " + this.name + "\n");
+			observer.setHasObserved(false);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -41,14 +45,17 @@ public class LibraryBook implements Subject {
 	public void Notify(String src, String dest) {
 		
 		for(Observer observer: this.observers) {
-			observer.update(src, dest);
+			try {
+				observer.update(src, dest, this);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
 	// Whenever setState is called, that means library book changes to different state
 	public void setState(LBState state) {
 		this.state = state;
-		Notify(this.state.toString(), state.toString());  // Call notify to update all observers.
 	}
 
 	public LBState getState() {

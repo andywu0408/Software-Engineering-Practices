@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestHW1Student" project="ECS160_HW1" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="unittest.TestHW1Student" time="0.2">
+    <testcase name="Question1" classname="unittest.TestHW1Student" time="0.021"/>
+    <testcase name="Question2" classname="unittest.TestHW1Student" time="0.179"/>
+  </testsuite>
+</testrun>

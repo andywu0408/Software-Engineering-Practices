@@ -1,5 +1,5 @@
-INDEX VERSION 1.131+C:\Users\Andy Wu\Desktop\ECS160 HW\.metadata\.plugins\org.eclipse.jdt.core
-524819999.index
-1775436793.index
-3350635978.index
+INDEX VERSION 1.131+C:\Users\Andy Wu\Desktop\ECS160\.metadata\.plugins\org.eclipse.jdt.core
 241497534.index
+524819999.index
+3350635978.index
+1775436793.index

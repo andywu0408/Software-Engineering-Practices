@@ -23,6 +23,7 @@ public class GotBack implements LBState{
 	public void shelf(LibraryBook book) throws IOException {
 		book.setState(OnShelf.getInst());
 		FileOutputter.write("Leaving State GotBack for State OnShelf\n");
+		book.Notify(this.toString(), "OnShelf");  
 	}
 	@Override
 	public void issue(LibraryBook book) throws IOException  {
