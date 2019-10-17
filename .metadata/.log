@@ -1,0 +1,122 @@
+!SESSION 2019-10-12 16:41:06.166 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=13
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-10-12 16:41:25.892
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andy Wu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2019-10-12 16:41:33.233
+!MESSAGE Setup tasks were performed during startup updating 5 preferences. See 'D:\Andy Wu\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.eclipse.core.resources 2 2 2019-10-12 16:45:31.740
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2019-10-12 16:45:31.740
+!MESSAGE The project description file (.project) for 'ECS160 HW1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.eclemma.ui 4 4 2019-10-12 23:15:53.578
+!MESSAGE ILaunchShortcut declaration not found: org.eclipse.pde.ui.junitWorkbenchShortcut
+
+!ENTRY org.eclipse.eclemma.ui 4 4 2019-10-12 23:15:57.140
+!MESSAGE ILaunchShortcut declaration not found: org.eclipse.pde.ui.junitWorkbenchShortcut
+!SESSION 2019-10-15 18:51:18.868 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=13
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-10-15 18:52:12.308
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-10-15 18:52:25.848
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andy Wu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-10-16 22:17:42.574 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=13
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-10-16 22:25:56.853
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-10-16 22:26:10.120
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andy Wu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-10-16 22:26:56.415 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=13
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-10-16 22:27:12.664
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andy Wu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.resources 4 2 2019-10-17 00:48:35.776
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding cannot be cast to class org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding (org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding and org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3545c913)
+	at org.eclipse.jdt.internal.compiler.ast.QualifiedNameReference.manageSyntheticAccessIfNecessary(QualifiedNameReference.java:909)
+	at org.eclipse.jdt.internal.compiler.ast.QualifiedNameReference.analyseCode(QualifiedNameReference.java:236)
+	at org.eclipse.jdt.internal.compiler.ast.QualifiedNameReference.analyseCode(QualifiedNameReference.java:187)
+	at org.eclipse.jdt.internal.compiler.ast.BinaryExpression.analyseCode(BinaryExpression.java:72)
+	at org.eclipse.jdt.internal.compiler.ast.BinaryExpression.analyseCode(BinaryExpression.java:72)
+	at org.eclipse.jdt.internal.compiler.ast.BinaryExpression.analyseCode(BinaryExpression.java:72)
+	at org.eclipse.jdt.internal.compiler.ast.CombinedBinaryExpression.analyseCode(CombinedBinaryExpression.java:128)
+	at org.eclipse.jdt.internal.compiler.ast.MessageSend.analyseCode(MessageSend.java:219)
+	at org.eclipse.jdt.internal.compiler.ast.Block.analyseCode(Block.java:48)
+	at org.eclipse.jdt.internal.compiler.ast.TryStatement.analyseCode(TryStatement.java:182)
+	at org.eclipse.jdt.internal.compiler.ast.MethodDeclaration.analyseCode(MethodDeclaration.java:128)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.internalAnalyseCode(TypeDeclaration.java:773)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.analyseCode(TypeDeclaration.java:272)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.analyseCode(CompilationUnitDeclaration.java:130)
+	at org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:892)
+	at org.eclipse.jdt.internal.compiler.ProcessTaskManager.run(ProcessTaskManager.java:145)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+
+!ENTRY org.eclipse.core.resources 4 75 2019-10-17 00:48:35.788
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.jdt.core 4 75 2019-10-17 00:48:35.788
+!MESSAGE Errors running builder 'Java Builder' on project 'ECS160_HW1'.
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding cannot be cast to class org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding (org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding and org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3545c913)
+	at org.eclipse.jdt.internal.compiler.ast.QualifiedNameReference.manageSyntheticAccessIfNecessary(QualifiedNameReference.java:909)
+	at org.eclipse.jdt.internal.compiler.ast.QualifiedNameReference.analyseCode(QualifiedNameReference.java:236)
+	at org.eclipse.jdt.internal.compiler.ast.QualifiedNameReference.analyseCode(QualifiedNameReference.java:187)
+	at org.eclipse.jdt.internal.compiler.ast.BinaryExpression.analyseCode(BinaryExpression.java:72)
+	at org.eclipse.jdt.internal.compiler.ast.BinaryExpression.analyseCode(BinaryExpression.java:72)
+	at org.eclipse.jdt.internal.compiler.ast.BinaryExpression.analyseCode(BinaryExpression.java:72)
+	at org.eclipse.jdt.internal.compiler.ast.CombinedBinaryExpression.analyseCode(CombinedBinaryExpression.java:128)
+	at org.eclipse.jdt.internal.compiler.ast.MessageSend.analyseCode(MessageSend.java:219)
+	at org.eclipse.jdt.internal.compiler.ast.Block.analyseCode(Block.java:48)
+	at org.eclipse.jdt.internal.compiler.ast.TryStatement.analyseCode(TryStatement.java:182)
+	at org.eclipse.jdt.internal.compiler.ast.MethodDeclaration.analyseCode(MethodDeclaration.java:128)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.internalAnalyseCode(TypeDeclaration.java:773)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.analyseCode(TypeDeclaration.java:272)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.analyseCode(CompilationUnitDeclaration.java:130)
+	at org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:892)
+	at org.eclipse.jdt.internal.compiler.ProcessTaskManager.run(ProcessTaskManager.java:145)
+	at java.base/java.lang.Thread.run(Thread.java:830)

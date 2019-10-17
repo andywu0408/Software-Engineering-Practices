@@ -1,0 +1,14 @@
+package hw1;
+import java.io.*;
+
+public class BadOperationException extends Exception {
+	private static FileOutputter writer = null;
+	
+	public BadOperationException(String method, String curState) throws IOException {
+		 if(writer == null) {
+			 writer = new FileOutputter("Q2&3Log.txt");
+		 }
+		 writer.write("Can't use " + method + " in " + curState + " state\n");
+		 writer.close();
+	}
+}

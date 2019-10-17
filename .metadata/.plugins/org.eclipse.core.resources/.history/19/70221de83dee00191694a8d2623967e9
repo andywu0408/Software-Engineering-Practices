@@ -1,0 +1,14 @@
+package hw1;
+import java.io.IOException;
+
+public interface LBState {
+	public void shelf() throws BadOperationException, IOException;
+
+	public void issue() throws BadOperationException, IOException ;
+
+	public void extend() throws BadOperationException, IOException;
+
+	public void returnIt() throws BadOperationException, IOException;
+
+	public String toString();
+}

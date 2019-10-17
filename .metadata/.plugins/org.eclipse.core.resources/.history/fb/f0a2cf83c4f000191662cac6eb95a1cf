@@ -1,0 +1,40 @@
+package hw1;
+
+import java.io.IOException;
+
+public class DestObserver implements Observer{
+	private String name;
+	
+	public DestObserver(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public void update(String src, String dest) {
+		try {
+			FileOutputter.write(name + " OBSERVED " +Leaving State Borrowed for State Borrowed\n");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public String toString() {
+		return this.name;
+	}
+
+	// only equals if this & rhs both are DestObserver and they have same name
+	@Override
+	public boolean equals(Object rhs) {
+		if (!(rhs instanceof DestObserver)) { 
+            return false; 
+        } 
+		DestObserver castedRhs = (DestObserver) rhs; 
+		return this.name == castedRhs.name;
+	}
+	
+	@Override
+	public int hashCode() {
+	    return Integer.parseInt(this.name);  
+	}
+
+}

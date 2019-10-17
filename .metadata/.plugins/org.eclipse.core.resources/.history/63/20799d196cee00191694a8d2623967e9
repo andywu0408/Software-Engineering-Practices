@@ -1,0 +1,43 @@
+package hw1;
+import java.io.IOException;
+
+
+public class LibraryBook {
+	private LBState state;
+	private String name;
+//	LibraryBook b = new LibraryBook("Design Patterns");
+	public LibraryBook(String name){
+		try {
+			// All book starts out on the shelf
+			state = OnShelf.getInst();
+			this.name = name;
+		}  catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void setState(LBState state) {
+		this.state = state;
+	}
+
+	public LBState getState() {
+		return state;
+	}
+
+	public void shelf() throws IOException {
+		state.shelf(this);
+	}
+
+	public void issue() throws IOException {
+		state.issue(this);
+	}
+
+	public void extend() throws IOException {
+		state.extend(this);
+	}
+
+	public void returnIt() throws  IOException {
+		state.returnIt(this);
+	}
+
+}

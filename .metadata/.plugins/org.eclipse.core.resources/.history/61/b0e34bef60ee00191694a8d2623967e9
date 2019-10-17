@@ -1,0 +1,16 @@
+package hw1;
+import java.io.*;
+import hw1.FileOutputter;
+
+public class BadOperationException {
+	
+	public static void throwError(String method, String curState) {
+		try {
+			FileOutputter.write("Can't use " + method + " in " + curState + " state\n");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

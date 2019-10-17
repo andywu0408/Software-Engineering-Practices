@@ -1,0 +1,20 @@
+package hw1;
+import java.io.*;
+import java.io.IOException;
+
+public class FileOutputter throws IOException {
+	private static FileWriter writer = new FileWriter("Q2&3Log.txt");
+
+	public FileOutputter(String Path) throws IOException {
+		writer = new FileWriter(Path);
+	}
+	
+	public static void write(String str) throws IOException{
+		writer.write(str);
+	}
+	
+	public static void close() throws IOException{
+		writer.close();
+	}
+	
+}

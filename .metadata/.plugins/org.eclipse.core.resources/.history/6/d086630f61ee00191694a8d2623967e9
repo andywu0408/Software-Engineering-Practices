@@ -1,0 +1,42 @@
+package hw1;
+import java.io.*;
+import hw1.BadOperationException;
+import hw1.FileOutputter;
+
+public class OnShelf implements LBState {
+	// Singleton
+	private static OnShelf instance;
+	
+	private OnShelf(){}
+	
+	public static OnShelf getInst() throws IOException{	
+		if(instance == null) {
+			instance = new OnShelf();
+			FileOutputter.write("OnShelf Instance Created\n");	
+			return instance;
+		}
+		return instance;
+	}
+	
+	@Override
+	public void shelf(LibraryBook book) throws BadOperationException, IOException {
+		throw new BadOperationException("shelf", instance.toString());
+	}
+	@Override
+	public void issue(LibraryBook book) throws IOException {
+		FileOutputter.write("Leaving State OnShelf for State Borrowed\n");
+		book.setState(Borrowed.getInst());
+	}
+	@Override
+	public void extend(LibraryBook book) throws BadOperationException, IOException {
+		throw new BadOperationException("extend", instance.toString());
+	}
+	@Override
+	public void returnIt(LibraryBook book) throws BadOperationException, IOException {
+		throw new BadOperationException("returnIt", instance.toString());
+	}
+	@Override
+	public String toString() {
+		return "OnShelf";
+	}
+}

@@ -1,0 +1,19 @@
+package hw1;
+import java.io.*;
+
+public class FileOutputter {
+	private static FileWriter writer = null;
+
+	public FileOutputter(String Path) throws IOException {
+		writer = new FileWriter(Path);
+	}
+	
+	public static void output(String str) throws IOException{
+		writer.write(str);
+	}
+	
+	public static void close() throws IOException{
+		writer.close();
+	}
+	
+}

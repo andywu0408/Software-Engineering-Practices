@@ -1,0 +1,38 @@
+package hw1;
+import java.io.IOException;
+
+
+public class LibraryBook {
+
+	private LBState state;
+
+	public LibraryBook() throws IOException {
+		// All book starts out on the shelf
+		state = OnShelf.getInst();
+	}
+
+	public void setState(LBState state) {
+		this.state = state;
+	}
+
+	public LBState getState() {
+		return state;
+	}
+
+	public void shelf() {
+		state.shelf();
+	}
+
+	public void issue() {
+		state.issue();
+	}
+
+	public void extend() {
+		state.extend();
+	}
+
+	public void returnIt() {
+		state.returnIt();
+	}
+
+}

@@ -1,0 +1,19 @@
+package hw1;
+import java.io.*;
+
+public class FileWriter {
+	private static FileWriter writer = null;
+
+	public FileWriter(String Path) {
+		writer = new FileWriter(Path);
+	}
+	
+	public static void output(String str) {
+		writer.write(str);
+	}
+	
+	public static void close() {
+		writer.close();
+	}
+	
+}

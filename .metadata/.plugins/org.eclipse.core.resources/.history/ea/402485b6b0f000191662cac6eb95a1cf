@@ -1,0 +1,14 @@
+package hw1;
+
+public interface Observer {
+	public String name;
+	
+	public void update() {
+		
+	}
+	
+	public void toString() {
+		
+	}
+
+}

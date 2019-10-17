@@ -1,0 +1,89 @@
+package hw1;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class LibraryBook implements Subject {
+	private LBState state;
+	public String name;
+	private List<Observer> observers = new ArrayList<Observer>();
+	
+	public LibraryBook(String name){
+		try {
+			// All book starts out on the shelf
+			state = OnShelf.getInst();
+			this.name = name;
+		}  catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public void attach(Observer observer) {
+		this.observers.add(observer);
+		try {
+			FileOutputter.write(observer.getName() + " is now watching " + this.name + "\n");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public void detach(Observer observer) {
+		this.observers.remove(observer);
+		try {
+			FileOutputter.write(observer.getName() + " is no longer watching " + this.name + "\n");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public void Notify(String src, String dest) {
+		for(Observer observer: this.observers) {
+			observer.update(src, dest);
+		}
+	}
+	
+	// Whenever setState is called, that means library book changes to different state
+	public void setState(LBState state) {
+		this.state = state;
+		Notify(this.state.toString(), state.toString());  // Call notify to update all observers.
+	}
+
+	public LBState getState() {
+		return state;
+	}
+
+	public void shelf(){
+		try {
+			state.shelf(this);
+		}  catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void issue(){
+		try {
+			state.issue(this);
+		}  catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void extend(){
+		try {
+			state.extend(this);
+		}  catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void returnIt(){
+		try {
+			state.returnIt(this);
+		}  catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

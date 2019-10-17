@@ -1,0 +1,46 @@
+package hw1;
+import java.io.*;
+
+public class OnShelf implements LBState {
+	private static OnShelf onshelfBook;
+	private static FileWriter writer = null;
+	
+	private OnShelf() throws IOException{}
+	
+	// Create one instance if none exists 
+	public static OnShelf getInst() throws IOException{	
+		if(writer == null) {
+			File f = new File("Q2&3Log.txt");
+			writer = new FileWriter("Q2&3Log.txt");
+		}
+		if(onshelfBook == null) {
+			onshelfBook = new OnShelf();
+			writer.write("OnShelf Instance Created\n");	
+			return onshelfBook;
+		}
+		writer.close();
+		return onshelfBook;
+	}
+	
+	
+	@Override
+	public void shelf () {
+		
+	}
+	@Override
+	public void issue() {
+		
+	}
+	@Override
+	public void extend() {
+		
+	}
+	@Override
+	public void returnIt() {
+		
+	}
+	@Override
+	public String toString() {
+		return "OnShelf";
+	}
+}

@@ -1,0 +1,46 @@
+package hw1;
+import java.io.*;
+import hw1.BadOperationException;
+
+public class GotBack implements LBState {
+	// Singleton
+	private static GotBack instance;
+	private static FileWriter writer = null;
+	
+	private GotBack(){}
+	
+	public static GotBack getInst() throws IOException{	
+		if(writer == null) {
+			writer = new FileWriter("Q2&3Log.txt", true);
+		}
+		if(instance == null) {
+			instance = new GotBack();
+			writer.write("GotBack Instance Created\n");	
+			return instance;
+		}
+		writer.close();
+		return instance;
+	}
+	
+	@Override
+	public void shelf(LibraryBook book) throws BadOperationException, IOException {
+		writer.write("Leaving State GotBack for State OnShelf\n");
+		book.setState(OnShelf.getInst());
+	}
+	@Override
+	public void issue(LibraryBook book) throws BadOperationException, IOException  {
+		throw new BadOperationException("issue", instance.toString());
+	}
+	@Override
+	public void extend(LibraryBook book) throws BadOperationException, IOException {
+		throw new BadOperationException("extend", instance.toString());
+	}
+	@Override
+	public void returnIt(LibraryBook book) throws BadOperationException, IOException {
+		throw new BadOperationException("returnIt", instance.toString());
+	}
+	@Override
+	public String toString() {
+		return "GotBack";
+	}
+}

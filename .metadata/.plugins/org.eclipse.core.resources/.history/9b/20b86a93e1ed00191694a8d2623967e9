@@ -1,0 +1,16 @@
+package hw1;
+
+public interface LBState {
+	public static void getInst() {
+	};
+
+	public void shelf();
+
+	public void issue();
+
+	public void extend();
+
+	public void returnIt();
+
+	public String toString();
+}

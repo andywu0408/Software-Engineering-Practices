@@ -1,0 +1,13 @@
+package hw1;
+
+public interface Observer {
+	private String name;
+	
+	public void update();
+	
+	public String toString();
+	
+	public boolean equals(Observer rhs);
+	
+
+}

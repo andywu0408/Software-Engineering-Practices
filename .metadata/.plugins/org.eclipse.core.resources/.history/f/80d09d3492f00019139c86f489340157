@@ -1,0 +1,55 @@
+package hw1;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Subject {
+	private String name;
+	private List<Observer> observers = new ArrayList<Observer>();
+	
+	public Subject(String name) {
+		this.name = name;
+	}
+	public void attach(Observer observer) {
+		this.observers.add(observer);
+		FileOutputter.write(observer.name + "");
+		“<observer_name> is now
+		watching <subject_name>
+	}
+	public void detach(Observer observer) {
+		this.observers.remove(observer);
+	}
+	public void Notify() {
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+public class NewsAgency {
+    private String news;
+    private List<Channel> channels = new ArrayList<>();
+ 
+    public void addObserver(Channel channel) {
+        this.channels.add(channel);
+    }
+ 
+    public void removeObserver(Channel channel) {
+        this.channels.remove(channel);
+    }
+ 
+    public void setNews(String news) {
+        this.news = news;
+        for (Channel channel : this.channels) {
+            channel.update(this.news);
+        }
+    }
+}

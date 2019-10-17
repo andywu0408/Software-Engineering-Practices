@@ -1,0 +1,10 @@
+package hw1;
+
+public class DestObserver {
+	private String name;
+	
+	public DestObserver(String name) {
+		this.name = name;
+	}
+
+}

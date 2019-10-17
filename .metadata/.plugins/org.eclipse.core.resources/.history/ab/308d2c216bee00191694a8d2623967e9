@@ -1,0 +1,47 @@
+package hw1;
+
+import java.io.*;
+
+// This is designed in Singleton pattern
+// Behavior is logged to a file named "Q1Log.txt" in the working directory
+public class PrintManager {	
+	private static PrintManager pm;
+	private static FileWriter writer = null;
+
+	private PrintManager(){}
+	
+	// Create one instance if none exists 
+	public static PrintManager ThePrintManager(){	
+		if(writer == null) {
+			try {
+				writer = new FileWriter("Q1Log.txt");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		if(pm == null) {
+			pm = new PrintManager();
+			try {
+				writer.write("Instance Created\n");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+			return pm;
+		}
+		try {
+			writer.write("Previously Created instance returned\n");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			writer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return pm;
+	}
+}

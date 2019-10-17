@@ -1,0 +1,29 @@
+package hw1;
+
+public class OnShelf implements LBState {
+
+	@Override
+	public static void getInst() {
+		
+	}
+	@Override
+	public void shelf () {
+
+	}
+	@Override
+	public void issue() {
+		
+	}
+	@Override
+	public void extend() {
+		
+	}
+	@Override
+	public void returnIt() {
+		
+	}
+	@Override
+	public String toString() {
+		return "OnShelf";
+	}
+}

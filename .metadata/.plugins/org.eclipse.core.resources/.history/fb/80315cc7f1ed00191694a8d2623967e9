@@ -1,0 +1,15 @@
+package hw1;
+import java.io.IOException;
+
+import hw1.OnShelf;
+
+public class LibraryBook{
+
+    private static LBState state;
+    
+    public LibraryBook() throws IOException{
+    	// All book starts out on the shelf
+    	state = OnShelf.getInst(); 
+    }
+    
+}

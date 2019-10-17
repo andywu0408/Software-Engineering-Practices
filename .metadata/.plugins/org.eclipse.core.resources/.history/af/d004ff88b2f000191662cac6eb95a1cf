@@ -1,0 +1,19 @@
+package hw1;
+
+public class DestObserver implements Observer{
+	private String name;
+	
+	public DestObserver(String name) {
+		this.name = name;
+	}
+	public void update() {
+		
+	}
+	@Override
+	public String toString() {
+		return this.name;
+	}
+	
+	
+
+}
